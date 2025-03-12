@@ -1,0 +1,7 @@
+result
+result-*
+src/*.o
+src/*.d
+main
+test.nix
+node_modules/

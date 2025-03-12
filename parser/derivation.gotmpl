@@ -1,0 +1,22 @@
+{ pkgs }:
+let dependencies = [
+{{- range . }}
+  (pkgs.stdenv.mkDerivation {
+    pname = "{{ .Name }}";
+    version = "{{ .Version }}";
+    src = pkgs.fetchurl {
+      url = "{{ .URL }}";
+      hash = "{{ .Integrity }}";
+    };
+    installPhase = ''
+      mkdir -p $out/node_modules/{{ .Name }}
+      cp -r package/* $out/node_modules/{{ .Name }}
+    '';
+  })
+{{- end }}
+];
+in
+pkgs.symlinkJoin {
+    name = "node_modules";
+    paths = dependencies;
+}
