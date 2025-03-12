@@ -7,7 +7,7 @@ in
   with pkgs;
     builtins.outputOf
     (stdenvNoCC.mkDerivation {
-      name = "result.drv";
+      name = "node_modules.drv";
       outputHashMode = "text";
       outputHashAlgo = "sha256";
       requiredSystemFeatures = ["recursive-nix"];

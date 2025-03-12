@@ -9,14 +9,14 @@ let dependencies = [
       hash = "{{ .Integrity }}";
     };
     installPhase = ''
-      mkdir -p $out/node_modules/{{ .Name }}
-      cp -r package/* $out/node_modules/{{ .Name }}
+      mkdir -p $out/{{ .Name }}
+      cp -r * $out/{{ .Name }}
     '';
   })
 {{- end }}
 ];
 in
 pkgs.symlinkJoin {
-    name = "node_modules";
-    paths = dependencies;
+  name = "node_modules";
+  paths = dependencies;
 }
