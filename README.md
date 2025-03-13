@@ -32,6 +32,9 @@ success Folder in sync.
 Done in 0.03s.
 ```
 
+Check out [MakeNix](https://github.com/fzakaria/MakeNix) for an example of how you might apply dynamic-derivations for incremental compilation for C/C++ Makefile projects.
+
+
 ## Testing
 
 You can run the parser by itself to generate the Nix expression that generates all the object files.
