@@ -1,6 +1,6 @@
 # NpmNix
 
-> Checkout my blog post [https://fzakaria.com/2025/03/11/nix-dynamic-derivations-a-practical-application](https://fzakaria.com/2025/03/11/nix-dynamic-derivations-a-practical-application) for an overview on this example.
+> Checkout my blog post [https://fzakaria.com/2025/03/12/nix-dynamic-derivations-a-lang2nix-practicum](https://fzakaria.com/2025/03/12/nix-dynamic-derivations-a-lang2nix-practicum) for an overview on this example.
 
 This is a demonstratin of the power of _dynamic-derivations_ in Nix leveraged to build a Node project via Makefile.
 
